@@ -21,6 +21,7 @@ export default defineConfig(({mode}) => {
     },
     preview: {
       host: true, // Expose server to the network
+      allowedHosts: ['finish-ixwp.onrender.com'],
     },
   };
 });
