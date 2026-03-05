@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinishLab - Free Fix</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-brand-dark text-white font-sans selection:bg-brand-green/30">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-brand-dark/50 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-brand-green rounded-lg flex items-center justify-center glow-green">
+            <i data-lucide="terminal" class="w-5 h-5 text-[#02110C]"></i>
+          </div>
+          <span class="font-display font-bold text-xl tracking-tight">FinishLab</span>
+        </div>
+        <button 
+          onclick="openModal()"
+          class="text-sm font-bold bg-brand-green text-[#02110C] px-5 py-2 rounded-[10px] hover:bg-white transition-all glow-green-hover"
+        >
+          Book Free Session
+        </button>
+      </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 bg-hero-gradient overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 opacity-20">
+        <img 
+          src="https://picsum.photos/seed/software-developer/1920/1080?blur=8" 
+          alt="Background" 
+          class="w-full h-full object-cover"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+      <!-- Tech Grid Background -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none z-1" 
+           style="background-image: radial-gradient(#00E38C 1px, transparent 1px); background-size: 40px 40px;"></div>
+      
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div class="animate-slide-in-left">
+          <h1 class="font-display text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
+            Free 15-Minute Session: <br />
+            <span class="text-brand-green">We’ll Fix ONE Thing In Your App — Live</span>
+          </h1>
+          
+          <div class="space-y-4 mb-10">
+            <p class="text-xl text-zinc-400 font-medium">Stuck on deployment? Authentication broken? Payments not working?</p>
+            <p class="text-lg text-zinc-500 leading-relaxed max-w-xl">
+              Jump on a 15-minute call and we’ll screenshare, diagnose the issue, 
+              and fix ONE thing for you — free.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-6 mb-8">
+            <button 
+              onclick="openModal()"
+              class="w-full sm:w-auto px-8 py-4 bg-brand-green text-[#02110C] font-bold rounded-[10px] hover:scale-105 transition-all glow-green-hover flex items-center justify-center gap-2"
+            >
+              Book My Free Session
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+            <div class="flex items-center gap-2 text-zinc-500 text-sm font-medium">
+              <i data-lucide="shield-check" class="w-5 h-5 text-brand-green"></i>
+              No sales pitch. Just real help.
+            </div>
+          </div>
+        </div>
+
+        <div class="relative animate-scale-in delay-200">
+          <!-- Transformation Mockup -->
+          <div class="relative aspect-[4/3] rounded-2xl border border-white/10 bg-brand-secondary/50 backdrop-blur-sm p-4 overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="grid grid-cols-2 gap-4 w-full h-full p-4">
+                <!-- Left: Broken State -->
+                <div class="rounded-xl bg-black/40 border border-red-500/20 p-4 relative overflow-hidden">
+                  <div class="flex items-center gap-2 mb-4">
+                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                    <span class="text-[10px] uppercase tracking-widest text-red-500 font-bold">Error: Deployment Failed</span>
+                  </div>
+                  <div class="space-y-2 opacity-40">
+                    <div class="h-2 w-3/4 bg-zinc-800 rounded"></div>
+                    <div class="h-2 w-1/2 bg-zinc-800 rounded"></div>
+                    <div class="h-12 w-full bg-zinc-900 rounded-lg border border-dashed border-zinc-700"></div>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <i data-lucide="alert-circle" class="w-12 h-12 text-red-500/20 animate-pulse"></i>
+                  </div>
+                </div>
+                <!-- Right: Clean Dashboard -->
+                <div class="rounded-xl bg-black/40 border border-brand-green/20 p-4 relative overflow-hidden">
+                  <div class="flex items-center gap-2 mb-4">
+                    <div class="w-2 h-2 rounded-full bg-brand-green"></div>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-green font-bold">Status: Live & Healthy</span>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex gap-2">
+                      <div class="h-8 w-8 rounded bg-brand-green/10 border border-brand-green/20"></div>
+                      <div class="space-y-1 flex-1">
+                        <div class="h-2 w-full bg-brand-green/20 rounded"></div>
+                        <div class="h-2 w-2/3 bg-brand-green/10 rounded"></div>
+                      </div>
+                    </div>
+                    <div class="h-16 w-full bg-brand-green/5 rounded-lg border border-brand-green/10 flex items-center justify-center">
+                      <i data-lucide="zap" class="w-6 h-6 text-brand-green/40"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Center Arrow -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-brand-green rounded-full flex items-center justify-center shadow-2xl z-20">
+              <i data-lucide="arrow-right" class="w-6 h-6 text-[#02110C]"></i>
+            </div>
+          </div>
+          <!-- Floating Glow -->
+          <div class="absolute -inset-4 bg-brand-green/10 blur-3xl -z-10 rounded-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Problem Section -->
+    <section class="py-24 px-6 bg-brand-secondary/30 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-slide-up">
+          <h2 class="text-3xl lg:text-5xl font-display font-bold mb-4">Most Apps Get Stuck at 80%</h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto">We've seen it hundreds of times. You're almost there, but one technical hurdle is blocking your launch.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="rounded-2xl bg-brand-secondary border border-white/5 hover:border-brand-green/30 transition-all group overflow-hidden animate-slide-up delay-100">
+            <div class="h-40 w-full relative overflow-hidden">
+              <img 
+                src="https://picsum.photos/seed/coding-screen/400/250" 
+                alt="Deployment Issues" 
+                class="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-110 transition-all duration-500"
+                referrerpolicy="no-referrer"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-secondary to-transparent"></div>
+            </div>
+            <div class="p-8 pt-0 -mt-8 relative z-10">
+              <div class="w-16 h-16 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-6 group-hover:scale-110 transition-transform shadow-lg backdrop-blur-md border border-white/5">
+                <i data-lucide="server" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Deployment Issues</h3>
+              <p class="text-zinc-400 leading-relaxed">Your app works locally but fails when going live. CI/CD pipelines, environment variables, or server configs.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="rounded-2xl bg-brand-secondary border border-white/5 hover:border-brand-green/30 transition-all group overflow-hidden animate-slide-up delay-200">
+            <div class="h-40 w-full relative overflow-hidden">
+              <img 
+                src="https://picsum.photos/seed/cyber-security/400/250" 
+                alt="Authentication Problems" 
+                class="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-110 transition-all duration-500"
+                referrerpolicy="no-referrer"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-secondary to-transparent"></div>
+            </div>
+            <div class="p-8 pt-0 -mt-8 relative z-10">
+              <div class="w-16 h-16 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-6 group-hover:scale-110 transition-transform shadow-lg backdrop-blur-md border border-white/5">
+                <i data-lucide="lock" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Authentication Problems</h3>
+              <p class="text-zinc-400 leading-relaxed">Google login, sessions, or permissions breaking your app. OAuth flows that just won't behave.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="rounded-2xl bg-brand-secondary border border-white/5 hover:border-brand-green/30 transition-all group overflow-hidden animate-slide-up delay-300">
+            <div class="h-40 w-full relative overflow-hidden">
+              <img 
+                src="https://picsum.photos/seed/digital-payment/400/250" 
+                alt="Payments Not Working" 
+                class="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-110 transition-all duration-500"
+                referrerpolicy="no-referrer"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-secondary to-transparent"></div>
+            </div>
+            <div class="p-8 pt-0 -mt-8 relative z-10">
+              <div class="w-16 h-16 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green mb-6 group-hover:scale-110 transition-transform shadow-lg backdrop-blur-md border border-white/5">
+                <i data-lucide="credit-card" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Payments Not Working</h3>
+              <p class="text-zinc-400 leading-relaxed">Stripe, Paystack or checkout integrations failing. Webhooks not firing or metadata missing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The Fix Section (Transformation) -->
+    <section class="py-24 px-6 overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <div class="order-2 lg:order-1 animate-scale-in">
+            <div class="relative rounded-3xl border border-white/10 bg-black/40 p-2 overflow-hidden shadow-2xl">
+              <div class="grid grid-cols-2 gap-2">
+                <div class="aspect-square bg-zinc-900 rounded-2xl p-6 flex flex-col justify-center border border-white/5">
+                  <i data-lucide="code-2" class="w-10 h-10 text-red-500/50 mb-4"></i>
+                  <div class="space-y-2">
+                    <div class="h-2 w-full bg-red-500/10 rounded"></div>
+                    <div class="h-2 w-3/4 bg-red-500/10 rounded"></div>
+                    <div class="h-2 w-1/2 bg-red-500/10 rounded"></div>
+                  </div>
+                  <p class="mt-4 text-[10px] font-mono text-red-500/50 uppercase tracking-widest">Stuck MVP</p>
+                </div>
+                <div class="aspect-square bg-brand-green/5 rounded-2xl p-6 flex flex-col justify-center border border-brand-green/20 relative overflow-hidden">
+                  <div class="absolute top-0 right-0 p-4">
+                    <i data-lucide="zap" class="w-6 h-6 text-brand-green animate-pulse"></i>
+                  </div>
+                  <i data-lucide="layout" class="w-10 h-10 text-brand-green mb-4"></i>
+                  <div class="space-y-2">
+                    <div class="h-2 w-full bg-brand-green/20 rounded"></div>
+                    <div class="h-2 w-full bg-brand-green/20 rounded"></div>
+                    <div class="h-2 w-full bg-brand-green/20 rounded"></div>
+                  </div>
+                  <p class="mt-4 text-[10px] font-mono text-brand-green uppercase tracking-widest">Working Product</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="order-1 lg:order-2 animate-slide-up">
+            <h2 class="text-3xl lg:text-5xl font-display font-bold mb-8">From Stuck MVP → Working Product</h2>
+            <div class="space-y-6 mb-10">
+              <p class="text-xl text-zinc-400">In 15 minutes we’ll:</p>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-4 text-lg text-zinc-300">
+                  <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green">
+                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                  </div>
+                  Look at your code or dashboard
+                </li>
+                <li class="flex items-center gap-4 text-lg text-zinc-300">
+                  <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green">
+                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                  </div>
+                  Diagnose the real issue
+                </li>
+                <li class="flex items-center gap-4 text-lg text-zinc-300">
+                  <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green">
+                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                  </div>
+                  Fix ONE problem live
+                </li>
+              </ul>
+            </div>
+            <div class="p-6 rounded-2xl bg-brand-green/10 border border-brand-green/20 inline-block">
+              <p class="text-brand-green font-bold text-lg">You leave the call with something actually working.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. How It Works Section -->
+    <section class="py-24 px-6 bg-brand-secondary/20">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-slide-up">
+          <h2 class="text-3xl lg:text-5xl font-display font-bold mb-4">How It Works</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12 relative">
+          <!-- Connecting Line -->
+          <div class="absolute top-1/2 left-0 w-full h-px bg-white/5 hidden md:block -z-10"></div>
+          
+          <div class="text-center animate-slide-up delay-100">
+            <div class="w-16 h-16 rounded-full bg-brand-dark border-4 border-brand-secondary flex items-center justify-center text-brand-green font-display font-bold text-xl mx-auto mb-6 shadow-xl">
+              01
+            </div>
+            <h3 class="text-xl font-bold mb-3">Book a Time</h3>
+            <p class="text-zinc-500">Pick a time that works for you from our calendar.</p>
+          </div>
+          <div class="text-center animate-slide-up delay-200">
+            <div class="w-16 h-16 rounded-full bg-brand-dark border-4 border-brand-secondary flex items-center justify-center text-brand-green font-display font-bold text-xl mx-auto mb-6 shadow-xl">
+              02
+            </div>
+            <h3 class="text-xl font-bold mb-3">Join Screenshare</h3>
+            <p class="text-zinc-500">Show us the issue you're stuck on via Google Meet.</p>
+          </div>
+          <div class="text-center animate-slide-up delay-300">
+            <div class="w-16 h-16 rounded-full bg-brand-dark border-4 border-brand-secondary flex items-center justify-center text-brand-green font-display font-bold text-xl mx-auto mb-6 shadow-xl">
+              03
+            </div>
+            <h3 class="text-xl font-bold mb-3">We Fix It</h3>
+            <p class="text-zinc-500">Our engineer helps you solve one problem live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Founder Assurance Section -->
+    <section class="py-24 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="p-12 rounded-[32px] bg-brand-secondary border border-white/10 relative overflow-hidden transition-transform hover:scale-[1.02] duration-300">
+          <div class="absolute top-0 right-0 p-12 opacity-10">
+            <i data-lucide="shield-check" class="w-32 h-32 text-brand-green"></i>
+          </div>
+          
+          <div class="relative z-10">
+            <h2 class="text-3xl lg:text-5xl font-display font-bold mb-8">No Pitch. Just Help.</h2>
+            <div class="space-y-6 text-xl text-zinc-400 leading-relaxed">
+              <p>This is not a sales call.</p>
+              <p>
+                We help you solve one issue. If you want help finishing the rest of your product, 
+                we can talk after.
+              </p>
+              <p class="text-white font-medium">If not, you're free to go build.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Booking Form Section -->
+    <section id="booking-section" class="py-24 px-6 bg-brand-secondary/30">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12 animate-slide-up">
+          <h2 class="text-3xl lg:text-5xl font-display font-bold mb-4">Book Your Free 15-Minute Fix</h2>
+          <p class="text-zinc-500">No strings attached. Let's get your app moving again.</p>
+        </div>
+        
+        <div class="bg-brand-dark rounded-3xl border border-white/10 shadow-2xl overflow-hidden min-h-[1200px] animate-scale-in">
+          <iframe 
+            src="https://forms.gle/YoZ6TRrQdHRZLZYB7" 
+            class="w-full h-[1200px] border-none"
+            title="Booking Form"
+            scrolling="no"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Final CTA Section -->
+    <section class="py-32 px-6 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-brand-green/5 blur-[120px] rounded-full -z-10"></div>
+      <div class="max-w-4xl mx-auto animate-slide-up">
+        <h2 class="text-4xl lg:text-6xl font-display font-bold mb-6">Your App Is Probably One Fix Away</h2>
+        <p class="text-xl text-zinc-400 mb-12">Stop being stuck at 80%. Let's fix one thing today.</p>
+        <button 
+          onclick="scrollToBooking()"
+          class="px-12 py-5 bg-brand-green text-[#02110C] font-bold rounded-xl hover:scale-105 transition-all glow-green-hover text-xl"
+        >
+          Book My Free Session
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-brand-dark">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-brand-green rounded flex items-center justify-center">
+            <i data-lucide="terminal" class="w-4 h-4 text-black"></i>
+          </div>
+          <span class="font-display font-bold text-lg tracking-tight">FinishLab</span>
+        </div>
+        <div class="text-zinc-500 text-sm">
+          © <span id="year"></span> FinishLab. All rights reserved.
+        </div>
+        <div class="flex gap-8 text-sm text-zinc-500">
+          <a href="#" class="hover:text-brand-green transition-colors">Privacy</a>
+          <a href="#" class="hover:text-brand-green transition-colors">Terms</a>
+          <a href="#" class="hover:text-brand-green transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal-overlay" class="fixed inset-0 z-[100] items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+      <div class="relative w-full max-w-3xl bg-brand-dark border border-white/10 rounded-3xl p-4 lg:p-8 shadow-2xl overflow-hidden max-h-[95vh] animate-scale-in">
+        <button 
+          onclick="closeModal()"
+          class="absolute top-6 right-6 p-2 hover:bg-white/5 rounded-full transition-colors z-50 bg-brand-dark/50 backdrop-blur-md"
+        >
+          <i data-lucide="x" class="w-6 h-6 text-zinc-400"></i>
+        </button>
+
+        <div class="w-full h-[90vh]">
+          <iframe 
+            src="https://forms.gle/YoZ6TRrQdHRZLZYB7" 
+            class="w-full h-full border-none rounded-2xl"
+            title="Booking Form Modal"
+            scrolling="no"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Modal functions
+      function openModal() {
+        document.getElementById('modal-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        document.getElementById('modal-overlay').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Scroll function
+      function scrollToBooking() {
+        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Close modal on escape key
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
