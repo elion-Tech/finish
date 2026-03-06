@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-brand-green: #00E38C;
+  --color-brand-dark: #020617;
+  --color-brand-secondary: #041E1A;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-white antialiased overflow-x-hidden;
+  }
+}
+
+.bg-hero-gradient {
+  background: radial-gradient(circle at top center, #031B13 0%, #020617 100%);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(0, 227, 140, 0.2);
+}
+
+.glow-green-hover:hover {
+  box-shadow: 0 0 30px rgba(0, 227, 140, 0.4);
+}
+
