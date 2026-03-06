@@ -1,3 +1,37 @@
 @tailwind base;
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: linear-gradient(180deg, #020617 0%, #031B13 50%, #041E1A 100%);
+  }
+}
+
+/* Custom Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-slide-in-left { animation: slideInLeft 0.8s ease-out forwards; }
+.animate-slide-up { animation: slideUp 0.8s ease-out forwards; }
+.animate-scale-in { animation: scaleIn 0.8s ease-out forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Glow Effects */
+.glow-green { box-shadow: 0 0 20px rgba(0, 227, 140, 0.3); }
+.glow-green-hover:hover { box-shadow: 0 0 30px rgba(0, 227, 140, 0.5); }
+
+/* Modal State */
+#modal-overlay { display: none; }
+#modal-overlay.active { display: flex; }
 @tailwind components;
 @tailwind utilities;
