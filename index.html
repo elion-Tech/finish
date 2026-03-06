@@ -430,6 +430,11 @@
       window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
       });
+
+      // Close modal when clicking outside
+      document.getElementById('modal-overlay').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) closeModal();
+      });
     </script>
   </body>
 </html>
